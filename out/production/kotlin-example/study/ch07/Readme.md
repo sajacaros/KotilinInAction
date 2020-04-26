@@ -16,8 +16,8 @@
 ### 7.1.1 이항 산술 연산 오버로딩
 * plus 연산자 구현
     ```        
-    operator fun plus(other: Point): Point {
-        data class Point(val x: Int, val y: Int) {
+    data class Point(val x: Int, val y: Int) {
+        operator fun plus(other: Point): Point {
             return Point(x + other.x, y + other.y)
         }
     }
@@ -200,19 +200,122 @@
 * for 루프 안의 in은 iterator()를 호출하며 동작
     ``` 
     operator fun CharSequence.iterator(): CharIterator
+    
     >>> for(c in "abc") { pirnt(c) }
     ```
     - iterator 메소드 구현
         - [날짜 범위에 대한 이터레이터 구현](IteratorImpl.kt)
 ## 7.4 구조 분해 선언과 루프
+* 구조 분해 선언(destucturing declaration)
+    - ![](../images/destructuring.PNG)
+    - 구조 분해 선언을 사용해 여러 값 반환하기
+        ``` 
+        data class NameComponents(val name:String, val extendsion: String)
+        
+        fun splitFilename(fullName: String): NameComponents {
+            val result = fullName.split('.', limit=2)
+            return NameComponents(result[0], result[1])
+        } 
+        
+        >>> val (name, ext) = SplitFilename("example.kt")
+        >>> print(name) // example
+        >>> print(ext) // kt
+        ```
+    - 컬렉션에 대해 구조 분해 선언 사용하기
+        ``` 
+        data class NameComponents(val name:String, val extendsion: String)
+                
+        fun splitFilename(fullName: String): NameComponents {
+            val (name, extenstion) = fullName.split('.', limit=2)
+            return NameComponents(name, extension)
+        }
+        ```
 ### 7.4.1 구조 분해 선언과 루프
-
+* 구조 분해 선언을 사용해 맵 이터레이션 하기
+    ``` 
+    fun printEntires(map: Map<String, String>) {
+        for((key, value) in map) {
+            print("$key -> $value")
+        }
+    }
+    
+    >>> val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    >>> printEntires(map) 
+    ```
+        - 객체를 이터레이션하는 관례
+            - 코틀린 표준 라이브러리에는 맵에 대한 확장 함수로 iterator가 들어가 있음
+        - 구조 분해 선언
 ## 7.5 프로퍼티 접근자 로직 재활용: 위임 프로퍼티
 ### 7.5.1 위임 프로퍼티 소개
+* 문법
+    ``` 
+    class Foo {
+        var p: Type by Delegate()
+    }
+    ```
+    - 풀어씀
+        ``` 
+        class Foo {
+            private val delegate = Delegate()
+            var p: Type
+            set(value: Type) = delegate.setValue(..., value)
+            get() = delegate.getValues(...)
+        }
+        ```
+    - ex)
+        ``` 
+        class Delegate {
+            operator fun getValue(...) {...}
+            operator fun setValue(..., value: Type) {...}
+        }
+        class Foo {
+            var p: Type by Delegate()
+        }
+        >>> val foo = Foo()
+        >>> val oldValue = foo.p
+        >>> foo.p = newValue
+        ```
 ### 7.5.2 위임 프로퍼티 사용: by lazy()를 사용한 프로퍼티 초기화 지연
+* 뒷받침하는 프로퍼티(backing property)
+    - 333p 참고
+* 지연 초기화를 위임 프로퍼티를 통해 구현하기
+    ``` 
+    class Person(val name:String) {
+        val emails by lazy {
+            loadEmails(this)
+        }
+    }
+    ```
 ### 7.5.3 위임 프로퍼티 구현
+* [delegator1](delegator1/DelegationProperty.kt)
+* [delegator2](delegator2/DelegationProperty2.kt)
+* [delegator3](delegator3/DelegationProperty3.kt)
+* [delegator4](delegator4/DelegationProperty4.kt)
 ### 7.5.4 위임 프로퍼티 컴파일 규칙
+* 위임 프로퍼티 쓰는 예제
+    ``` 
+    class C {
+        val prop: Type by MyDelegate()
+    }
+    ``` 
+* 컴파일 후
+    ``` 
+    class C {
+        private val <delegate> = MyDelegate()
+        var prop: Type
+            get() = <delegate>.getValue(this, <property>)
+            set(value: Type) = <delegate>.setValue(this, <property>, value
+    }
+    ```
+    - ![](../images/property.PNG)
+    - MyDelegate 클래스의 인스턴스를 ```<delegate>```라는 감쳐진 프라퍼티에 저장
+    - 프로퍼티를 표현하기 위해 KProperty 타입의 객체를 사용
+        - ```<property>``` 이용
+        - * [delegator3](delegator3/DelegationProperty3.kt) 참고
 ### 7.5.5 프로퍼티 값을 맵에 저장
+* 확장 가능한 객체(expando object)
+    - 자신의 프로퍼티를 동적으로 정의할 수 있는 객체를 만들 때 위임 프로퍼티를 활용
+    - [propertyMap](propertyMap.kt)
 ### 7.5.6 프레임워크에서 위임 프로퍼티 활용
 
 ## 7.6 요약

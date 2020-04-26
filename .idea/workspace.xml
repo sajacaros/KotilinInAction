@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="934556a9-5a69-417f-a912-663876b892f1" name="Default Changelist" comment="" />
+    <list default="true" id="934556a9-5a69-417f-a912-663876b892f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/GroupByDemo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/delegator1/DelegationProperty.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/delegator2/DelegationProperty2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/delegator3/DelegationProperty3.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/delegator4/DelegationProperty4.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/propertyMap.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/ch07/propertyMap2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study/images/property.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-example/META-INF/kotlin-example.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-example/META-INF/kotlin-example.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-example/study/ch07/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-example/study/ch07/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/study/ch07/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/study/ch07/Readme.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +28,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZTBMptbEnB9BRDbHFpuwUfWpEC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,68 +40,86 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/study/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/study/ch07" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src" />
       <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\extension" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\ch07" />
+      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\images" />
+      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\ch07\delegator4" />
+      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\ch07\delegator3" />
+      <recent name="C:\Users\KDU\Workspace\study\kotlin-example\src\study\ch07\delegator2" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.IteratorImplKt">
-    <configuration name="ExtensionTestKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.PropertyMap2Kt">
+    <configuration name="PropertyMap2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-example" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="ExtensionTestKt" />
+      <option name="MAIN_CLASS_NAME" value="PropertyMap2Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IteratorImplKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="PropertyMapKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-example" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="IteratorImplKt" />
+      <option name="MAIN_CLASS_NAME" value="PropertyMapKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RangeToExampleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="study.ch07.delegator1.DelegationProperty2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-example" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="RangeToExampleKt" />
+      <option name="MAIN_CLASS_NAME" value="study.ch07.delegator1.DelegationProperty2Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="study.ch07.MutableCollectionTestKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="study.ch07.delegator1.DelegationProperty3Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-example" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="study.ch07.MutableCollectionTestKt" />
+      <option name="MAIN_CLASS_NAME" value="study.ch07.delegator1.DelegationProperty3Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="study.ch07.delegator1.DelegationProperty4Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-example" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="study.ch07.delegator1.DelegationProperty4Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,9 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.IteratorImplKt" />
-        <item itemvalue="Kotlin.RangeToExampleKt" />
-        <item itemvalue="Kotlin.study.ch07.MutableCollectionTestKt" />
+        <item itemvalue="Kotlin.PropertyMap2Kt" />
+        <item itemvalue="Kotlin.PropertyMapKt" />
+        <item itemvalue="Kotlin.study.ch07.delegator1.DelegationProperty4Kt" />
+        <item itemvalue="Kotlin.study.ch07.delegator1.DelegationProperty3Kt" />
+        <item itemvalue="Kotlin.study.ch07.delegator1.DelegationProperty2Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +149,9 @@
       <workItem from="1585295233123" duration="62000" />
       <workItem from="1586687107317" duration="6198000" />
       <workItem from="1586713859569" duration="12000" />
-      <workItem from="1587257129888" duration="9165000" />
+      <workItem from="1587257129888" duration="12269000" />
+      <workItem from="1587717340624" duration="3688000" />
+      <workItem from="1587866545503" duration="6272000" />
     </task>
     <servers />
   </component>
@@ -119,29 +159,60 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586713869936">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1587271789436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586713869936" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587264731400">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587271789436" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587873200726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587264731400" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587264731400">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587873200726" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587873200724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587264731400" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587264731400">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587873200724" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587873200724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587264731400" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587264731400">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587873200724" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587873200724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587264731400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587873200724" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1587721206013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587721206013" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1587721206013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587721206013" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1587721206013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587721206013" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1587721206013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587721206013" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1587259236048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587259236048" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587867086648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587867086648" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/study/ch07/IteratorImpl.kt</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -16,8 +16,8 @@
 ### 7.1.1 이항 산술 연산 오버로딩
 * plus 연산자 구현
     ```        
-    operator fun plus(other: Point): Point {
-        data class Point(val x: Int, val y: Int) {
+    data class Point(val x: Int, val y: Int) {
+        operator fun plus(other: Point): Point {
             return Point(x + other.x, y + other.y)
         }
     }
@@ -260,6 +260,7 @@
             var p: Type
             set(value: Type) = delegate.setValue(..., value)
             get() = delegate.getValues(...)
+        }
         ```
     - ex)
         ``` 
@@ -286,8 +287,49 @@
     }
     ```
 ### 7.5.3 위임 프로퍼티 구현
+* [delegator1](delegator1/DelegationProperty.kt)
+* [delegator2](delegator2/DelegationProperty2.kt)
+* [delegator3](delegator3/DelegationProperty3.kt)
+* [delegator4](delegator4/DelegationProperty4.kt)
 ### 7.5.4 위임 프로퍼티 컴파일 규칙
+* 위임 프로퍼티 쓰는 예제
+    ``` 
+    class C {
+        val prop: Type by MyDelegate()
+    }
+    ``` 
+* 컴파일 후
+    ``` 
+    class C {
+        private val <delegate> = MyDelegate()
+        var prop: Type
+            get() = <delegate>.getValue(this, <property>)
+            set(value: Type) = <delegate>.setValue(this, <property>, value
+    }
+    ```
+    - ![](../images/property.PNG)
+    - MyDelegate 클래스의 인스턴스를 ```<delegate>```라는 감쳐진 프라퍼티에 저장
+    - 프로퍼티를 표현하기 위해 KProperty 타입의 객체를 사용
+        - ```<property>``` 이용
+        - * [delegator3](delegator3/DelegationProperty3.kt) 참고
 ### 7.5.5 프로퍼티 값을 맵에 저장
+* 확장 가능한 객체(expando object)
+    - 자신의 프로퍼티를 동적으로 정의할 수 있는 객체를 만들 때 위임 프로퍼티를 활용
+    - [map을 이용한 프로퍼티 정의](propertyMap.kt)
+    - [map 확장함수 이용](propertyMap2.kt)
 ### 7.5.6 프레임워크에서 위임 프로퍼티 활용
-
+* 객체 프로퍼티를 저장하거나 변경하는 방법을 바꿀 수 있으면 프로엠워크를 개발할 때 유용
+    ``` 
+    object users: IdTable() {
+        val name = varchar("name", length = 50).index()
+        val age = integer("age")    
+    }
+  
+    class User(id: EntityId): Entity(id) {
+        var name: String by Users.name
+        var age: Int by Users.age
+    }
+    ```
+    - https://github.com/JetBrains/Exposed 참고
+    - https://github.com/JetBrains/Exposed/blob/master/exposed-core/src/main/kotlin/org/jetbrains/exposed/sql/Table.kt
 ## 7.6 요약
