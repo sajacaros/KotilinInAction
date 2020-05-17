@@ -36,7 +36,7 @@
     } 
     ```
 * 오버로딩 가능한 이항 산술 연산자
-    - ![](../images/binaryArithmeticOperator.png)
+    - ![](images/binaryArithmeticOperator.png)
 * 두 피연산자의 타입이 다른 연산자 정의
     ``` 
     operator fun Point.times(scale: Double): Point {
@@ -68,7 +68,7 @@
             }
             ```
 * 코드에 있는 +=를 plus와 plusAssign 양쪽으로 컴파일 가능
-    - ![](../images/plusOrplusAssign.PNG)
+    - ![](images/plusOrplusAssign.PNG)
     - plus와 plusAssign 연산을 동시 정의하는 것은 지양
     - Point 처럼 ```변경 불가능```하다면 plus와 같이 새로운 값을 반환하는 연산만을 추가
     - 빌더와 같이 ```변경 가능한 클래스```를 설계한다면 plusAssign과 비슷한 연산만을 추가
@@ -93,7 +93,7 @@
         ```
 ### 7.1.3 단항 연산자 오버로딩
 * 오버로딩할 수 있는 단항 산술 연산자
-    - ![](../images/unaryOperation.PNG)
+    - ![](images/unaryOperation.PNG)
     - ex) 증가 연산자
         ```
         operator fun BigDecimal.inc() = this + BigDecimal.ONE
@@ -104,7 +104,7 @@
 ## 7.2 비교 연산자 오버로딩
 ### 7.2.1 동등성 연산자: equals
 * 동등성 검사
-    - ![](../images/equals.PNG)
+    - ![](images/equals.PNG)
     - 직접 구현
         ``` 
         class Point(val x: Int, val y: Int) {
@@ -124,7 +124,7 @@
         - != 연산 지원
 ### 7.2.2 순서 연산자: compareTo
 * 순서 연산자
-    - ![](../images/compareTo.PNG)
+    - ![](images/compareTo.PNG)
     ``` 
     class Person(val firstName: String, val lastName: String): Comparable<Person> {
         override fun compareTo(other: Person): Int {
@@ -154,7 +154,7 @@
     >>> val p = Point(10,20)
     >>> print(p[1])
     ```
-    - ![](../images/get.PNG)
+    - ![](images/get.PNG)
 * set 관례 구현하기
     ``` 
     data class MutablePoint(var x: Int, var y: Int)
@@ -169,7 +169,7 @@
     >>> p[1] = 42
     >>> print(p) // MutablePoint(x=10,y=42)
     ```
-    - ![](../images/set.PNG)
+    - ![](images/set.PNG)
 ### 7.3.2 in 관례
 * in 관례 구현하기
     ``` 
@@ -182,10 +182,10 @@
     >>> print(Point(20,30) in rect) // true
     >>> print(Point(5,5) in rect) // false
     ```
-    - ![](../images/contains.PNG)
+    - ![](images/contains.PNG)
 ### 7.3.3 rangeTo 관례
 * ```..연산자```는 rangeTo 함수를 간략하게 표현하는 방법
-    - ![](../images/rangeTo.PNG)
+    - ![](images/rangeTo.PNG)
 * Comparable 인터페이스를 구현하면 rangeTo를 정의할 필요가 없음
     - 코틀린 표준 라이브러리에는 모든 Comparable 객체에 대해 적용 가능한 rangeTo 함수가 있음
         ``` 
@@ -207,7 +207,7 @@
         - [날짜 범위에 대한 이터레이터 구현](IteratorImpl.kt)
 ## 7.4 구조 분해 선언과 루프
 * 구조 분해 선언(destucturing declaration)
-    - ![](../images/destructuring.PNG)
+    - ![](images/destructuring.PNG)
     - 구조 분해 선언을 사용해 여러 값 반환하기
         ``` 
         data class NameComponents(val name:String, val extendsion: String)
@@ -307,7 +307,7 @@
             set(value: Type) = <delegate>.setValue(this, <property>, value
     }
     ```
-    - ![](../images/property.PNG)
+    - ![](images/property.PNG)
     - MyDelegate 클래스의 인스턴스를 ```<delegate>```라는 감쳐진 프라퍼티에 저장
     - 프로퍼티를 표현하기 위해 KProperty 타입의 객체를 사용
         - ```<property>``` 이용
